@@ -1,6 +1,6 @@
 package main;
 import java.util.Scanner;
-
+// cria as strings e metodos gerais de atributos para o animal
 class Animal {
     private String nome;
     private String classe;
@@ -10,7 +10,7 @@ class Animal {
     private int caloria;
     private int força;
 
-    // Construtor
+// constroi o animal
     public Animal(String nome, String classe, String familia) {
         this.nome = nome;
         this.classe = classe;
@@ -21,7 +21,7 @@ class Animal {
         this.força = 10;
     }
 
-    // Métodos
+    // acoes que podem ocorrer com o animal    
     public void nascer() {
         System.out.printf("O animal se chama %s, é da classe %s da família %s. ", nome, classe, familia);
         System.out.printf("O animal possui força %d, caloria %d e idade %d.%n", força, caloria, idade);
@@ -92,7 +92,7 @@ public class BichinhoVirtual {
         Animal animal = new Animal(nome, classe, familia);
         animal.nascer();
 
-        // Loop do jogo
+        // jogo
         while (animal.isVivo()) {
             System.out.println("O que o animal vai fazer agora?");
             System.out.println("1- Comer");
@@ -116,7 +116,7 @@ public class BichinhoVirtual {
                     animal.morrer();
                     break;
                 default:
-                    System.out.println("Opção inválida!");
+                    System.out.println("Opçao errada.");
             }
         }
 
